@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_workorder_form_view_inherit_inherit_google_doc" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.form.inherit.google.doc</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='worksheet_google_slide']" position="after">
+                <field name="worksheet_google_doc" widget="embed_viewer" attrs="{'invisible': [('worksheet_type', '!=', 'google_doc')]}"/>
+            </xpath> 
+        </field>
+    </record>
+</odoo>
